@@ -95,8 +95,7 @@ Implications: Water infrastructure built on 1990s assumptions is becoming obsole
 ## Contact
 
 Ava De Mello
-Student ID: 1010862238
-Course: GGR276H5S - Spatial Data Science I
+Course: Spatial Data Science I
 Institution: University of Toronto Mississauga
 
 ---
