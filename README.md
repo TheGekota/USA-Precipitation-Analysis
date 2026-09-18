@@ -44,4 +44,63 @@ Strongest Positive Trend: Rocky Mountains (+1.2 mm/year)
 
 Strongest Negative Trend: Northeast Coast (−0.5 mm/year)
 
-## Project Structure
+
+## Skills Demonstrated
+
+- Spatial Statistics: Mean, standard deviation, min/max, range calculations
+- Temporal Analysis: 25-year trend detection via linear regression
+- Raster Analysis: Multidimensional data processing (2M+ grid cells)
+- Data Visualization: Professional cartography with ArcGIS Pro
+- Communication: Clear documentation of complex spatial analysis
+- Domain Knowledge: Understanding climate, geography, and water resources
+
+## Methodology
+
+Analysis Steps:
+1. Stacked 300 monthly raster layers into multidimensional cube
+2. Calculated mean, std dev, min, max, range across time dimension
+3. Fitted linear regression per grid cell to derive trend slopes
+4. Extracted time-series at 5 representative locations
+5. Created professional cartographic outputs with legends, scale bars, and coordinates
+
+Tools: ArcGIS Pro 3.x, NOAA GDAS Runoff data
+
+## Data Source
+
+NOAA Global Data Assimilation System (GDAS) Runoff
+- Temporal Range: May 2000 – May 2025 (25 years, monthly resolution)
+- Spatial Coverage: Continental USA
+- Resolution: 0.5° × 0.5° grid (~55 km cells)
+- Variables: Total Runoff (mm)
+
+## Key Insights for Interviews
+
+Coastal Drying Crisis: Historically wet regions are becoming less reliable for water supply planning
+
+Inland Intensification: Previously dry mountain regions now experience extreme precipitation events
+
+Synchronized Risk: Outlier years occur simultaneously across regions—risk is correlated, not independent
+
+Implications: Water infrastructure built on 1990s assumptions is becoming obsolete
+
+## Files
+
+- README.md - This file (project overview)
+- INTERVIEW_BRIEF.md - 2-minute pitch for recruiters
+- KEY_METRICS_INSIGHTS.md - Detailed findings and statistics
+- METHODOLOGY.md - Technical workflow and reproducibility
+- sample_maps/ - Professional cartographic outputs
+- data/ - NOAA data source documentation
+- analysis/ - Statistical summary tables
+
+## Contact
+
+Ava De Mello
+Student ID: 1010862238
+Course: GGR276H5S - Spatial Data Science I
+Institution: University of Toronto Mississauga
+
+---
+
+Created: September 2026
+Status: Portfolio-Ready
