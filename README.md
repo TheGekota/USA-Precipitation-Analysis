@@ -101,5 +101,4 @@ Institution: University of Toronto Mississauga
 
 ---
 
-Created: September 2026
-Status: Portfolio-Ready
+Created: March 2026
