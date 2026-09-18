@@ -1,0 +1,127 @@
+# Key Metrics & Insights
+
+## The Headline (30-second pitch)
+
+I analyzed 25 years of USA precipitation data and discovered that while coasts remain the wettest, rainfall is shifting inland into the Rocky Mountains, where recent outlier events reached 650mm. The Northeast and Northwest coasts are drying (−0.5 mm/year), while mountain regions are intensifying (+1.2 mm/year)—suggesting a long-term climate circulation shift with water resource implications.
+
+## The Numbers (What to Lead With)
+
+### Scale of Analysis
+- 25 years of continuous data (May 2000–May 2025)
+- ~2 million grid cells analyzed simultaneously
+- 300+ monthly snapshots processed into statistical layers
+
+### Key Statistics
+- Mean precipitation: 769 mm (across USA)
+- Standard deviation: 1,491 mm (shows 2x variability in some regions)
+- Range: 0–4,747 mm (some locations get 95x more rain than others)
+- Trend magnitude: −0.5 to +1.2 mm/year (0.5% annual change)
+
+### Regional Disparities
+| Region | Avg Runoff | Variability | Trend |
+|--------|-----------|-------------|-------|
+| West Coast (Portland) | 100 mm | ±50 mm | Declining |
+| East Coast (Boston) | 80 mm | ±55 mm | Declining |
+| Great Plains (Pierre, SD) | 12 mm | ±12 mm | Stable |
+| Rocky Mountains (Gallatin, MT) | 45 mm | ±300 mm | Increasing |
+
+Translation: Coasts are 8–10x wetter but getting drier; mountains are drier on average but becoming MORE variable and wetter.
+
+## The Insights
+
+### Insight 1: Coastal Dominance with Coastal Decline
+Finding: Coasts average 80–100mm, interior USA averages 10–30mm.
+But: Both coasts show negative slopes (−0.5 mm/year), meaning they're drying.
+
+Why it matters: Water supply planning for coastal cities needs updated assumptions. Historical precipitation data is outdated.
+
+### Insight 2: The Inland Shift
+Finding: Interior West historically had near-zero runoff. Now experiencing extreme events (650+ mm).
+Trend: +1.2 mm/year in Rocky Mountains—strongest positive trend in dataset.
+
+Why it matters: Western drought narratives are incomplete. Some regions are actually wetting. Water availability is shifting geographically. Flooding risk increasing in previously "dry" communities.
+
+### Insight 3: Great Plains Consistency
+Finding: Great Plains have lowest variability (0–25 mm range).
+
+Why it matters: Predictable despite being dry. Farmers can plan with certainty. Water infrastructure is simpler to design. But highlights chronic water stress.
+
+### Insight 4: Outlier Events are Synchronized
+Finding: Extreme precipitation spikes in 2005, 2017, 2018, 2020 occurred across all 5 study regions simultaneously.
+
+Why it matters: Events are NOT independent. Continental-scale weather systems dominate. Risk modeling must account for correlated risk. Insurance and disaster response must be coordinated nationally.
+
+### Insight 5: Mountains are the X-Factor
+Finding: Gallatin National Forest, MT shows:
+- Baseline: 45 mm (moderate)
+- Variability: ±300 mm (extreme)
+- Trend: +1.2 mm/year (intensifying)
+- Outlier in 2018: 650 mm (14x baseline)
+
+Why it matters: Mountain regions increasingly unpredictable. Snow melt + rain = flooding risk in previously flood-free areas. Hydroelectric systems face new stress. Ecosystem resilience tested.
+
+## The Story (Why This Matters in 2026)
+
+Historical Assumption: "Wet coasts stay wet; dry interiors stay dry."
+
+New Reality:
+1. Coasts are getting drier
+2. Mountains are getting wetter AND more variable
+3. Outlier events are synchronized (not isolated)
+4. Interior expansion is real and measurable
+
+Implication: Water infrastructure built in the 1990s is obsolete. Cities, farms, and utilities need to adapt to a shifting precipitation geography.
+
+## Technical Depth (For When They Ask)
+
+Methods Used:
+- Multidimensional Raster Analysis: Stacked 300 monthly layers into spatiotemporal cube
+- Zonal Statistics: Calculated mean, std dev, min, max per grid cell across time
+- Linear Regression: Fit Runoff = a + b*Year per cell to derive slope values
+- Temporal Profiles: Extracted time-series at 5 locations; analyzed deviation patterns
+- Professional Cartography: ArcGIS styling with quantile classification
+
+Why These Methods Matter:
+- Reproducible: Anyone with raw data can recreate these layers
+- Scalable: Same workflow applies to 25 years, 100 years, or real-time
+- Interpretable: Raster maps are visual; statistics are rigorous
+- Predictive: Slope values can extrapolate future trends
+
+## Talking Points by Role
+
+### For Product Analyst Roles
+"This project taught me to work with massive datasets, derive meaningful metrics, and tell a spatial story. In analytics roles, I'd apply the same approach: identify patterns in data, quantify uncertainty, and communicate findings to non-technical stakeholders. The 'insight' here isn't just numbers—it's what they mean for decision-making."
+
+### For Data Analyst Roles
+"I worked with geospatial data, but the methods are universal: temporal trend detection, anomaly identification, spatial correlation. These principles apply to any dataset where you need to find signal in noise."
+
+### For UX Research + Analytics Roles
+"This project bridged research and data: I started with a research question (how is precipitation changing?), designed an analysis approach, and interpreted findings for non-technical audiences using maps and visuals. That's the same workflow in UX: gather data, analyze, communicate to stakeholders."
+
+## Quick Wins (What Impressed)
+
+1. Identified 25-year trend → Shows patience with longitudinal data
+2. Explained why coasts vary more than plains → Domain knowledge
+3. Found synchronized outlier events → Critical thinking
+4. Created professional cartography → Attention to detail
+5. Translated stats to real-world implications → Strategic thinking
+
+## Supporting Materials
+
+For Quick Reference:
+- 2 professional maps (mean + std dev)
+- This KEY_METRICS sheet (for interviews)
+- Time-series chart showing 5 locations
+- Slope map visualization
+- 1-page methodology summary
+
+For Technical Deep-Dives:
+- Statistical outputs (actual numbers)
+- Step-by-step analysis workflow
+- Metadata on GDAS dataset
+- Raw time-series CSV
+
+---
+
+Created: September 2026
+Status: Interview-Ready
