@@ -86,7 +86,6 @@ Implications: Water infrastructure built on 1990s assumptions is becoming obsole
 ## Files
 
 - README.md - This file (project overview)
-- INTERVIEW_BRIEF.md - 2-minute pitch for recruiters
 - KEY_METRICS_INSIGHTS.md - Detailed findings and statistics
 - METHODOLOGY.md - Technical workflow and reproducibility
 - sample_maps/ - Professional cartographic outputs
