@@ -1,4 +1,4 @@
-# METHODOLOGY.md
+# Methodology
 
 Workflow for the USA May Runoff Trend Analysis (2000–2025), completed in ArcGIS Pro 3.x.
 
