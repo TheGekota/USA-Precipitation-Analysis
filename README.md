@@ -1,103 +1,78 @@
-# USA Precipitation & Runoff Trend Analysis
+# USA May Runoff Trend Analysis (2000–2025)
 
-A spatial data science analysis identifying regional precipitation patterns and long-term trends across the continental United States (2000–2025)
+A spatial analysis of 26 years of May total runoff across the continental United States, built with multidimensional raster analysis in ArcGIS Pro. Completed for GGR276 (Spatial Data Science I) at the University of Toronto Mississauga, Winter 2026.
 
-## Overview
+![Standard deviation of May total runoff, continental USA, 2000–2025](StdDev_Precipitation_Map.jpg)
 
-This analysis examines 25 years of monthly runoff data across the continental USA to identify spatial patterns, regional trends, and climate-related shifts in precipitation. Using raster statistics and spatial modeling, the project reveals where precipitation is concentrated, how variability differs by region, and where runoff is increasing or decreasing.
+## Summary
 
-Key Finding: Coastal regions show high precipitation but are drying. Mountain regions are becoming wetter. This suggests a westward shift in atmospheric precipitation patterns with implications for water resource planning.
+- **Where runoff is highest:** The Pacific Northwest and Northeast coasts have the highest average May runoff, with scattered high cells through the Rocky Mountains.
+- **Where it varies most:** The same areas. The NW and NE coasts and the Rockies swing the most from year to year, while the interior stays consistently low.
+- **How it's changing:** The trend (slope) layer shows declining May runoff along the Northeast coast and parts of the Northwest coast, and increases in the Rocky Mountains (including parts of Colorado and Utah) and the East South Central region. Most of the interior shows little to no change.
+- **Shared spikes:** Several locations spike in the same years (the mid-2000s and 2017–2018), which points to large weather systems rather than purely local events. The biggest single spike was about 650 mm at Gallatin National Forest, Montana, in 2018.
 
-## Key Metrics
+> **A note on runoff vs. precipitation:** This project uses *total runoff*, the water that flows off the land surface after evaporation and infiltration. It follows precipitation and snowmelt, but it isn't the same as rainfall, so the findings describe runoff only.
 
-| Metric | Value | Interpretation |
-|--------|-------|-----------------|
-| Mean Precipitation (USA) | 769 mm | Wide variability across regions |
-| Standard Deviation | 1,491 mm | High variability in coastal and mountain zones |
-| Maximum Recorded | 4,747 mm | Extreme events in coastal/mountain regions |
-| Minimum Recorded | 0 mm | Persistent dry zones in interior West |
-| Range | 4,709 mm | Vast difference between wettest and driest regions |
+## Data
 
-## Key Findings
+| Property | Value |
+|---|---|
+| Variable | Total runoff (mm) |
+| Source | NOAA GDAS, provided through the GGR276 course |
+| Time period | May of each year, 2000–2025 (26 layers) |
+| Coverage | Continental USA |
+| Spatial reference | WGS 1984 (maps shown in WGS 1984 Web Mercator Auxiliary Sphere) |
 
-### Coastal Dominance with Coastal Decline
-Coasts receive 3–7 times more precipitation than interior regions, but both coasts show negative slopes (−0.5 mm/year), meaning they're drying over 25 years.
+## Method
 
-### The Inland Shift
-Interior West now experiences extreme events (650+ mm) previously rare. The Rocky Mountain region shows the strongest positive trend (+1.2 mm/year).
+1. Combined the 26 May runoff layers into one multidimensional raster (time dimension: StdTime).
+2. Calculated mean, standard deviation, minimum, and maximum across time for every cell, and a range layer (max − min).
+3. Generated a linear trend (slope) layer, in mm per year, to show where May runoff is increasing or decreasing.
+4. Extracted temporal profiles at five locations to compare regions.
+5. Built finished maps with legends, scale bars, north arrows, and coordinate grids.
 
-### Great Plains Consistency
-Great Plains are reliably dry but highly predictable (low variability). This makes water planning simpler but highlights chronic water stress.
+Full steps are in [METHODOLOGY.md](METHODOLOGY.md).
 
-### Synchronized Outlier Events
-Extreme precipitation years (2005, 2017, 2018, 2020) occurred simultaneously across regions, indicating continental-scale weather systems drive precipitation rather than local variation.
+## Results at a glance
 
-## Regional Patterns
+These are the ranges of cell values in each output layer, not national averages.
 
-Highest Precipitation: Pacific Northwest (Portland, OR) and Northeast (Boston, MA) - 80-100 mm average
+| Layer | Cell values | What it shows |
+|---|---|---|
+| Mean | 0–769 mm | Typical May runoff at each location |
+| Standard deviation | 0–1,491 mm | How much May runoff varies year to year |
+| Minimum | 0–476 mm | The driest May on record for each cell |
+| Maximum | 0–4,747 mm | The wettest May on record for each cell |
+| Range | 0–4,709 mm | Spread between the wettest and driest May |
 
-Lowest Precipitation: Great Plains (Pierre, SD) and South Central (Victoria, TX) - 10-12 mm average
+More detail, including the five sample locations, is in [KEY_METRICS_INSIGHTS.md](KEY_METRICS_INSIGHTS.md).
 
-Highest Variability: Rocky Mountains and Coastal Regions - std dev 300+ mm
+![May total runoff at five locations, 2000–2025](Timeseries_5Locations.png)
 
-Strongest Positive Trend: Rocky Mountains (+1.2 mm/year)
+## Limitations
 
-Strongest Negative Trend: Northeast Coast (−0.5 mm/year)
+- **Runoff is not precipitation.** Results describe surface runoff only.
+- **May only.** Each year contributes one month, so this captures late-spring conditions (including snowmelt), not annual totals.
+- **Short record.** 26 data points per cell is a short window for climate trends, and no significance testing was done, so the trend layer shows direction, not confirmed long-term change.
+- **Sensitive to single events.** One extreme year (like Gallatin in 2018) can noticeably pull a linear slope.
+- **Point profiles are single cells.** Each sample location represents one coarse grid cell, not a whole region.
 
+## Next steps
 
-## Skills Demonstrated
-
-- Spatial Statistics: Mean, standard deviation, min/max, range calculations
-- Temporal Analysis: 25-year trend detection via linear regression
-- Raster Analysis: Multidimensional data processing (2M+ grid cells)
-- Data Visualization: Professional cartography with ArcGIS Pro
-- Communication: Clear documentation of complex spatial analysis
-- Domain Knowledge: Understanding climate, geography, and water resources
-
-## Methodology
-
-Analysis Steps:
-1. Stacked 300 monthly raster layers into multidimensional cube
-2. Calculated mean, std dev, min, max, range across time dimension
-3. Fitted linear regression per grid cell to derive trend slopes
-4. Extracted time-series at 5 representative locations
-5. Created professional cartographic outputs with legends, scale bars, and coordinates
-
-Tools: ArcGIS Pro 3.x, NOAA GDAS Runoff data
-
-## Data Source
-
-NOAA Global Data Assimilation System (GDAS) Runoff
-- Temporal Range: May 2000 – May 2025 (25 years, monthly resolution)
-- Spatial Coverage: Continental USA
-- Resolution: 0.5° × 0.5° grid (~55 km cells)
-- Variables: Total Runoff (mm)
-
-## Key Insights for Interviews
-
-Coastal Drying Crisis: Historically wet regions are becoming less reliable for water supply planning
-
-Inland Intensification: Previously dry mountain regions now experience extreme precipitation events
-
-Synchronized Risk: Outlier years occur simultaneously across regions—risk is correlated, not independent
-
-Implications: Water infrastructure built on 1990s assumptions is becoming obsolete
+- Add significance testing to the trend layer to separate real trends from noise
+- Extend the analysis to all months to compare seasons
+- Reproduce the workflow in Python for a fully scripted version
+- Publish the trend layer as an interactive web map
 
 ## Files
 
-- README.md - This file (project overview)
-- KEY_METRICS_INSIGHTS.md - Detailed findings and statistics
-- METHODOLOGY.md - Technical workflow and reproducibility
-- sample_maps/ - Professional cartographic outputs
-- data/ - NOAA data source documentation
-- analysis/ - Statistical summary tables
+- `README.md` – Project overview (this file)
+- `KEY_METRICS_INSIGHTS.md` – Detailed findings and sample locations
+- `METHODOLOGY.md` – Step-by-step workflow
+- `StdDev_Precipitation_Map.jpg` – Standard deviation map
+- `Timeseries_5Locations.png` – Temporal profiles at five locations
 
-## Contact
+## Author
 
-Ava De Mello
-Course: Spatial Data Science I
-Institution: University of Toronto Mississauga
-
----
-
-Created: March 2026
+Ava De Mello · University of Toronto Mississauga
+[Portfolio](https://thegekota.github.io/Gekotas-Nook/) · [LinkedIn](https://www.linkedin.com/in/ava-de-mello-274778302)
