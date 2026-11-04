@@ -31,7 +31,7 @@ A spatial analysis of 26 years of May total runoff across the continental United
 4. Extracted temporal profiles at five locations to compare regions.
 5. Built finished maps with legends, scale bars, north arrows, and coordinate grids.
 
-Full steps are in [METHODOLOGY.md](METHODOLOGY.md).
+Full steps are in [METHODOLOGY.md](Methodology.md).
 
 ## Results at a glance
 
@@ -45,7 +45,7 @@ These are the ranges of cell values in each output layer, not national averages.
 | Maximum | 0–4,747 mm | The wettest May on record for each cell |
 | Range | 0–4,709 mm | Spread between the wettest and driest May |
 
-More detail, including the five sample locations, is in [KEY_METRICS_INSIGHTS.md](KEY_METRICS_INSIGHTS.md).
+More detail, including the five sample locations, is in [KEY_METRICS_INSIGHTS.md](Key_Metrics_&_Insights.md).
 
 ![May total runoff at five locations, 2000–2025](Timeseries_5Locations.png)
 
