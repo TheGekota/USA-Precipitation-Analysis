@@ -2,7 +2,7 @@
 
 A spatial analysis of 26 years of May total runoff across the continental United States, built with multidimensional raster analysis in ArcGIS Pro. Completed for GGR276 (Spatial Data Science I) at the University of Toronto Mississauga, Winter 2026.
 
-![Standard deviation of May total runoff, continental USA, 2000–2025](Standard%20Deviation%20of%20Total%20Monthly%20Runoff%20.jpg)
+![Standard deviation of May total runoff, continental USA, 2000–2025](Standard%20Deviation%20of%20Total%20Monthly%20Runoff.jpg)
 
 ## Summary
 
@@ -69,7 +69,7 @@ More detail, including the five sample locations, is in [KEY_METRICS_INSIGHTS.md
 - `README.md` – Project overview (this file)
 - `KEY_METRICS_INSIGHTS.md` – Detailed findings and sample locations
 - `METHODOLOGY.md` – Step-by-step workflow
-- `Standard Deviation of Total Monthly Runoff .jpg` – Standard deviation map
+- `Standard Deviation of Total Monthly Runoff.jpg` – Standard deviation map
 - `Temp_chart.png` – Temporal profiles at five locations
 
 ## Author
